@@ -99,7 +99,7 @@ This project was developed to strengthen practical knowledge of **Python Full St
 | Backend            | Python                                                 |
 | Framework          | Flask                                                  |
 | Database ORM       | SQLAlchemy                                             |
-| Database           | SQLite / MySQL *(Configure according to your project)* |
+| Database           | MySQL *(Configure according to your project)* |
 | Frontend           | HTML5                                                  |
 | Styling            | CSS3                                                   |
 | UI Framework       | Bootstrap 5                                            |
@@ -111,43 +111,45 @@ This project was developed to strengthen practical knowledge of **Python Full St
 
 ---
 
-🏗️ Project Architecture (MVC)
-                    User
-                      │
-                      ▼
-               Browser (Client)
-                      │
-                HTTP Request
-                      │
-                      ▼
-              Controller (Flask)
-      ┌───────────────┼────────────────┐
-      │               │                │
- Authentication   Product Module   Payment Module
-      │               │                │
-      └───────────────┼────────────────┘
-                      │
-                      ▼
-             Model (SQLAlchemy ORM)
-                      │
-              SQLite / MySQL Database
-                      ▲
-                      │
-               Retrieves & Stores Data
-                      │
-                      ▼
-          View (HTML + Jinja2 Templates)
-                      │
-                HTTP Response
-                      │
-                      ▼
-                    User
-                    
+## 🏗️ Project Architecture (MVC)
+
+```text
+                        User
+                          │
+                          ▼
+                   Browser (Client)
+                          │
+                    HTTP Request
+                          │
+                          ▼
+            Controller (Flask Routes)
+      (main.py, auth.py, admin.py, payment.py)
+                          │
+                          ▼
+               Model (SQLAlchemy ORM)
+                     (models.py)
+                          │
+                          ▼
+              Database (MySQL / SQLite)
+                          │
+                          ▼
+               Model Returns Data
+                          │
+                          ▼
+          View (Jinja2 HTML Templates)
+      (templates + static + Bootstrap)
+                          │
+                    HTTP Response
+                          │
+                          ▼
+                         User
 ```
 
-```
+
 
 📁 Project Structure (MVC Architecture)
+
+```text
 python-flask-ecommerce/
 │
 ├── 📁 static/                     # Static assets
@@ -180,7 +182,7 @@ python-flask-ecommerce/
 ├── 📄 requirements.txt            # Project Dependencies
 ├── 📄 .gitignore                  # Ignored Files
 ├── 📄 README.md                   # Project Documentation
-└── 📄 database.db                 # SQLite Database
+└── 📄 database.db                 # MySQL Database
 🏗️ MVC Mapping
 MVC Component	Files
 Model	models.py, database.db
