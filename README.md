@@ -301,17 +301,17 @@ http://127.0.0.1:5000
 ---
 ## 🔐 profile Page
 
-![Login]( screenshots/loginpage.png)
+![Profile]( screenshots/profilepage.png)
 
 ---
 ## 🔐 Admin Page
 
-![Login]( screenshots/loginpage.png)
+![Admin]( screenshots/adminpage.png)
 
 ---
 ## 🔐 Admin Dashboard
 
-![Login]( screenshots/loginpage.png)
+![Admin Dashboard]( screenshots/admin_dashboard.png)
 
 ---
 ## 🛒 Shopping Cart
@@ -321,7 +321,7 @@ http://127.0.0.1:5000
 ---
 ## 🔐 payment
 
-![Login]( screenshots/loginpage.png)
+![Payment]( screenshots/payment.png)
 
 
 
