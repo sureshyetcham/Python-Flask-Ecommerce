@@ -13,7 +13,7 @@
 
 </p>
 
-<h1 align="center">🛍️ Flask E-Commerce Website</h1>
+<h1 align="center">🛍️  E-Commerce Website</h1>
 
 <p align="center">
 A modern Full Stack E-Commerce web application developed using <b>Python Flask</b>, <b>SQLAlchemy</b>, <b>HTML</b>, <b>CSS</b>, <b>Bootstrap</b>, and <b>JavaScript</b>.
