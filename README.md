@@ -275,6 +275,29 @@ http://127.0.0.1:5000
 ```
 
 ---
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home](screenshorts/homepage.png)
+
+---
+
+## 🔐 Login Page
+
+![Login]( screenshorts/loginpage.png)
+
+---
+
+## 🛍️home Product Page
+
+![Products](screenshorts/products homepage.png)
+
+---
+
+## 🛒 Shopping Cart
+
+![Cart](screenshorts/cartpage.png)
 
 
 
