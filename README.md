@@ -111,51 +111,81 @@ This project was developed to strengthen practical knowledge of **Python Full St
 
 ---
 
-# 🏗️ Project Architecture
-
-```text
-                 User
-                   │
-                   ▼
-           Flask Application
-                   │
-      ┌────────────┼─────────────┐
-      │            │             │
- Authentication   Products     Payment
-      │            │             │
-      └────────────┼─────────────┘
-                   │
-             SQLAlchemy ORM
-                   │
-             SQLite / MySQL
+🏗️ Project Architecture (MVC)
+                    User
+                      │
+                      ▼
+               Browser (Client)
+                      │
+                HTTP Request
+                      │
+                      ▼
+              Controller (Flask)
+      ┌───────────────┼────────────────┐
+      │               │                │
+ Authentication   Product Module   Payment Module
+      │               │                │
+      └───────────────┼────────────────┘
+                      │
+                      ▼
+             Model (SQLAlchemy ORM)
+                      │
+              SQLite / MySQL Database
+                      ▲
+                      │
+               Retrieves & Stores Data
+                      │
+                      ▼
+          View (HTML + Jinja2 Templates)
+                      │
+                HTTP Response
+                      │
+                      ▼
+                    User
+                    
 ```
 
----
+```
 
-# 📁 Project Structure
-
-```text
-E-Commerce-Website/
+📁 Project Structure (MVC Architecture)
+python-flask-ecommerce/
 │
-├── static/
-│   ├── css/
-│   ├── js/
-│   ├── images/
+├── 📁 static/                     # Static assets
+│   ├── 📁 css/
+│   ├── 📁 js/
+│   ├── 📁 images/
+│   └── 📁 uploads/
 │
-├── templates/
+├── 📁 templates/                  # View (Jinja2 Templates)
+│   ├── base.html
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── products.html
+│   ├── cart.html
+│   ├── checkout.html
+│   └── admin/
 │
-├── media/
+├── 📁 media/                      # Product Images
 │
-├── auth.py
-├── admin.py
-├── forms.py
-├── models.py
-├── payment.py
-├── main.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── database.db
+├── 📄 main.py                     # Application Entry Point
+│
+├── 📄 auth.py                     # Controller - User Authentication
+├── 📄 admin.py                    # Controller - Admin Operations
+├── 📄 payment.py                  # Controller - Payment Processing
+├── 📄 forms.py                    # Forms & Input Validation
+│
+├── 📄 models.py                   # Model - Database Models
+│
+├── 📄 requirements.txt            # Project Dependencies
+├── 📄 .gitignore                  # Ignored Files
+├── 📄 README.md                   # Project Documentation
+└── 📄 database.db                 # SQLite Database
+🏗️ MVC Mapping
+MVC Component	Files
+Model	models.py, database.db
+View	templates/, static/, media/
+Controller	main.py, auth.py, admin.py, payment.py, forms.py
 ```
 
 ---
