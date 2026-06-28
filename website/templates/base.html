@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!--CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!--  Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--  Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!--  Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="background-color: rgb(124, 14, 151);">
+    
+
+<div style="background-color: white;">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom px-3">
+
+    <!-- Left -->
+    <div class="d-flex align-items-center gap-3">
+    <div class="logo-text">
+    <strong style="background-color: black; color: white; padding:5px; display:inline-block;">
+    Shopify
+</strong>
+    </div>
+        <a href="/" class="nav-link">Home</a>
+        <a href="#about-us" class="nav-link">About Us</a>
+        <a href="#about-us" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Center -->
+<form class="mx-auto d-flex align-items-center"
+      role="search"
+      action="/search"
+      method="GET">
+
+    <input
+        class="form-control search-box"
+        type="search"
+        name="search"
+        placeholder="Search">
+
+    <button type="submit"
+            class="btn btn-warning ms-2">
+        Search
+    </button>
+
+</form>
+    
+<a href="/cart" class="nav-link">
+    Cart <span id="cart-count" style= "background:black;color:white;border-radius:25%;padding :3px">{{ cart|length }}</span>
+    
+</a>
+    <a href="/wishlist" class="nav-link" style=" padding :5px;margin:3px">
+        WishList <i class="bi bi-heart-fill"></i>
+    </a>
+
+    <!-- Account Dropdown -->
+    <div class="dropdown">
+        <a class="nav-link dropdown-toggle"
+           href="#"
+           id="accountDropdown"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+
+            Account <i class="bi bi-person"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+            {% if current_user.is_authenticated %}
+                <li><a class="dropdown-item" href="/profile/{{ current_user.id }}">Profile</a></li>
+                <li><a class="dropdown-item" href="/orders">Orders</a></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            {% else %}
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+                <li><a class="dropdown-item" href="/sign-up">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+
+
+</nav>
+
+</div>
+
+<!-- Purple bar -->
+<div class="purple-bar"></div>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show m-2" role="alert">
+                {{ message }}
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close">
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<!--footer -->
+<div class="container">
+    {% block body %}{% endblock %}
+</div>
+<footer  id="about-us" class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h5>About Us</h5>
+                <p>
+                    Welcome to Shopify, your trusted online shopping destination.
+                    We offer high-quality products, secure payment options, and
+                    excellent customer service to ensure a smooth shopping experience.
+                    Our goal is to deliver value, convenience, and satisfaction to
+                    customers across the country.
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Products</a></li>
+                    <li><a href="/cart" class="text-white text-decoration-none">Cart</a></li>
+                    <li><a href="/contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <p>Email: support@Shopify.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+
+        </div>
+
+        <hr class="bg-light">
+
+        <div class="text-center">
+            <p class="mb-0">&copy; 2026 Shopify. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery  code) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- custom JS -->
+<script src="{{ url_for('static', filename='js/myScript.js') }}"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f1f3f6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee;
+}
+
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+.search-box {
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* Purple bar */
+.purple-bar {
+    height: 5px;
+    background: linear-gradient(90deg, purple, violet);
+}
+.container {
+    display: flex;
+    justify-content: flex-end;   /* 🔥 pushes content to right */
+    align-items: flex-start;
+    width:500px;
+   
+}
+/* Category box */
+#right1 {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 10px;
+
+    
+}
+
+/* Items */
+.list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333 !important;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 14px;
+    transition: 0.3s;
+    
+    
+}
+
+/* Hover */
+.list-group-item:hover {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white !important;
+    transform: translateX(5px);
+}
+
+/* Icons */
+.list-group-item i {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.list-group-item:hover i {
+    color: white;
+}
+
+

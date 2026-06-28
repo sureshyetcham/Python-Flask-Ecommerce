@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div style="width:100%; margin:30px auto;">
+    
+    <h2 style="text-align:center; color:white; margin-bottom:20px;">
+        Customers
+    </h2>
+
+    <table style="width:100%; border-collapse:collapse; background:white;">
+        <tr>
+            <th style="border:1px solid black; padding:12px; background:white; color:black;">
+                ID
+            </th>
+            <th style="border:1px solid black; padding:12px; background:white; color:black;">
+                Username
+            </th>
+            <th style="border:1px solid black; padding:12px; background:white; color:black;">
+                Email
+            </th>
+        </tr>
+
+        {% for customer in customers %}
+        <tr>
+            <td style="border:1px solid black; padding:12px; color:black;">
+                {{ customer.id }}
+            </td>
+            <td style="border:1px solid black; padding:12px; color:black;">
+                {{ customer.username }}
+            </td>
+            <td style="border:1px solid black; padding:12px; color:black;">
+                {{ customer.email }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}
