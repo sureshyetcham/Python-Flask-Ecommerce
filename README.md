@@ -283,15 +283,16 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔐 Login Page
+## 🛍️homepage products
 
-![Login]( screenshorts/loginpage.png)
+
+![Products](screenshorts/products homepage.png)
 
 ---
 
-## 🛍️home Product Page
+## 🔐 Login Page
 
-![Products](screenshorts/products homepage.png)
+![Login]( screenshorts/loginpage.png)
 
 ---
 
