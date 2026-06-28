@@ -283,7 +283,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🏠 products HomePage
+## 🛍️ products HomePage
 
 ![Products Page](screenshots/products_homepage.png)
 
@@ -294,10 +294,34 @@ http://127.0.0.1:5000
 ![Login]( screenshots/loginpage.png)
 
 ---
+## 🔐 Signup Page
 
+![Signup]( screenshots/loginpage.png)
+
+---
+## 🔐 profile Page
+
+![Login]( screenshots/loginpage.png)
+
+---
+## 🔐 Admin Page
+
+![Login]( screenshots/loginpage.png)
+
+---
+## 🔐 Admin Dashboard
+
+![Login]( screenshots/loginpage.png)
+
+---
 ## 🛒 Shopping Cart
 
 ![Cart](screenshots/cartpage.png)
+
+---
+## 🔐 payment
+
+![Login]( screenshots/loginpage.png)
 
 
 
