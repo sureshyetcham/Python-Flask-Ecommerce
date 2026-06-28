@@ -283,10 +283,9 @@ http://127.0.0.1:5000
 
 ---
 
-## 🛍️homepage products
+## 🏠 Home Page
 
-
-![Products](screenshorts/products homepage.png)
+![products](screenshorts/ products homepage.png)
 
 ---
 
