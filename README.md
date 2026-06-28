@@ -165,11 +165,11 @@ E-Commerce-Website/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/sureshyetcham/FirstProject.git
+git clone https://github.com/sureshyetcham/Python-Flask-Ecommerce.git
 ```
 
 ```bash
-cd FirstProject
+cd Python-Flask-Ecommerce
 ```
 
 ---
