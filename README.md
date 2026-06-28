@@ -99,7 +99,7 @@ This project was developed to strengthen practical knowledge of **Python Full St
 | Backend            | Python                                                 |
 | Framework          | Flask                                                  |
 | Database ORM       | SQLAlchemy                                             |
-| Database           | SQLite *(Configure according to your project)* |
+| Database           | SQLite
 | Frontend           | HTML5                                                  |
 | Styling            | CSS3                                                   |
 | UI Framework       | Bootstrap 5                                            |
@@ -252,12 +252,6 @@ Example:
 
 ```python
 SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
-```
-
-or
-
-```python
-SQLALCHEMY_DATABASE_URI = "mysql://username:password@localhost/database_name"
 ```
 
 ---
