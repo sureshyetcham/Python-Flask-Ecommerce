@@ -99,7 +99,7 @@ This project was developed to strengthen practical knowledge of **Python Full St
 | Backend            | Python                                                 |
 | Framework          | Flask                                                  |
 | Database ORM       | SQLAlchemy                                             |
-| Database           | MySQL *(Configure according to your project)* |
+| Database           | SQLite *(Configure according to your project)* |
 | Frontend           | HTML5                                                  |
 | Styling            | CSS3                                                   |
 | UI Framework       | Bootstrap 5                                            |
@@ -130,7 +130,7 @@ This project was developed to strengthen practical knowledge of **Python Full St
                      (models.py)
                           │
                           ▼
-              Database (MySQL / SQLite)
+              Database (SQLite)
                           │
                           ▼
                Model Returns Data
@@ -279,25 +279,25 @@ http://127.0.0.1:5000
 
 ## 🏠 Home Page
 
-![Home](screenshorts/homepage.png)
+![Home](screenshots/homepage.png)
 
 ---
 
 ## 🏠 Home Page
 
-![products](screenshorts/ products homepage.png)
+![products](screenshots/ products_homepage.png)
 
 ---
 
 ## 🔐 Login Page
 
-![Login]( screenshorts/loginpage.png)
+![Login]( screenshots/loginpage.png)
 
 ---
 
 ## 🛒 Shopping Cart
 
-![Cart](screenshorts/cartpage.png)
+![Cart](screenshots/cartpage.png)
 
 
 
